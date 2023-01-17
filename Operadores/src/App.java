@@ -55,6 +55,43 @@ public class App {
         System.out.println(resultado);
 
 
+        ////
+
+        /* Quando for fazer um comparação de objetos o correto é usar o metodo nativo "equals"
+         * exemplo:
+        */
+
+        String nomeUm = "Erick";
+        String nomeDois = new String("Erick");
+
+        //System.out.println(nomeUm == nomeDois);
+        // Resultar em: false
+        //Se usassemos o .equals, resultaria true.
+        //exemplo:
+
+        //System.out.println(nomeUm.equals(nomeDois));
+        //Imprimirá: true
+
+        // No caso dos numeros podemos usar normalmente o operador aritmético "=="
+
+        int numUm, numDois;
+
+        numUm = 5; 
+        numDois = 5;
+
+        //System.out.println(numUm == numDois);
+        //Imprimirá: true
+
+
+
+
+
+
+
+
+
+
+
 
         
         
