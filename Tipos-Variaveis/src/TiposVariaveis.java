@@ -1,6 +1,18 @@
 public class TiposVariaveis {
     public static void main(String[] args) throws Exception {
 
+        //Tipos de String
+
+        String meuNome = "Erick Araujo de Carvalho";
+        char sexo = 'M';
+
+        /*Temos o tipo string que aceita uma cadeia de caracteres, e o tipo
+         * char que aceita exclusivamente um caracter, e deve ser usado aspas simples.
+        */
+
+        ////
+
+        
         //Tipos de variaveis numericas a baixo:
 
         byte idade = 123;
