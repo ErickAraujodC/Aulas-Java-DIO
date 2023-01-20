@@ -1,4 +1,4 @@
-package com.erick.exercicios;
+package com.erick.exercicios.loops;
 
 import java.util.Scanner;
 
