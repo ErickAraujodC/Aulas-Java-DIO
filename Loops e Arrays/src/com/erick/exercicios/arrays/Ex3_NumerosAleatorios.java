@@ -20,16 +20,22 @@ public class Ex3_NumerosAleatorios {
             numeros[i] = numeroAleatorio;
         }
 
-        System.out.print("Vetor:    ");
+        System.out.print("Vetor:      ");
         for(int numero : numeros){
             System.out.print(numero + " ");
         }
 
         System.out.println(" ");
-        System.out.print("Sucessor: ");
-        do {
-            System.out.print((numeros[cont]+1) + " ");
-            cont++;
-        } while (cont<numeros.length);
+        System.out.print("Antecessor: ");
+        for(int numero : numeros){
+            System.out.print((numero-1) + " ");
+        }
+
+        System.out.println(" ");
+
+        System.out.print("Sucessor:   ");
+        for(int numero : numeros){
+            System.out.print((numero+1) + " ");
+        }
     }    
 }
