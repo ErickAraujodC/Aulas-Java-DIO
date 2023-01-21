@@ -32,7 +32,6 @@ public class Ex3_NumerosAleatorios {
         }
 
         System.out.println(" ");
-
         System.out.print("Sucessor:   ");
         for(int numero : numeros){
             System.out.print((numero+1) + " ");
