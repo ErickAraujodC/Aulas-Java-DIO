@@ -1,4 +1,4 @@
-package com.erick;
+package com.erick.exercicios;
 
 import javax.sound.sampled.SourceDataLine;
 
