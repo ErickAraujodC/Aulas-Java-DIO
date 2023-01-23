@@ -1,7 +1,5 @@
 package com.erick.exercicios;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Calculadora {
 
     public static void somar(Double numero1, Double numero2) {
