@@ -1,18 +1,8 @@
 package com.erick.exercicios;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 public class MsgHoraDia {
-    public static void main(String[] args) {
-        Date dataHoraAtual = new Date();
-        String horaCompleta = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-    
-        String horaStr = horaCompleta.substring(0, 2);
-        int hora = Integer.parseInt(horaStr);
-
-        obterMensagem(hora, horaCompleta);
-    }
 
     public static void obterMensagem(int hora, String horaCompleta){
         if(hora>=6 && hora<12){
