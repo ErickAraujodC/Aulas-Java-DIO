@@ -1,3 +1,5 @@
+package com.erick.smart_tv;
+
 public class Usuario {
     public static void main(String[] args) throws Exception {
         SmartTV smartTV = new SmartTV();

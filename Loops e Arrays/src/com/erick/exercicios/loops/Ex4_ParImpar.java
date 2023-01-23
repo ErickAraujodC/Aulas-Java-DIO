@@ -24,7 +24,7 @@ public class Ex4_ParImpar {
             
             if(continuar.equals("N")) break;
         }
-
+        
         for(int i = 0; i < numeros.size(); i++){
            
             if(numeros.get(i)%2==0){
