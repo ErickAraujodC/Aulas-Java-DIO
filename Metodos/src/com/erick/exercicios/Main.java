@@ -8,8 +8,8 @@ public class Main {
         //Emprestimo
         double valor = 100d;
         int parcelas = 12;
-        System.out.println(Emprestimo.taxaJuros(valor, parcelas));
-        
+        Emprestimo.taxaJuros(valor, parcelas);
+        System.out.println();
         //Mensagem dia 
 
         Date dataHoraAtual = new Date();
@@ -19,7 +19,7 @@ public class Main {
         int hora = Integer.parseInt(horaStr);
 
         MsgHoraDia.obterMensagem(hora, horaCompleta);
-
+        System.out.println();
         //Calculadora
 
         Calculadora.dividir(1.02, 10.0);
