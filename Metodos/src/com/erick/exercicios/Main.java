@@ -27,7 +27,9 @@ public class Main {
         Calculadora.somar(1, 10);
         Calculadora.multiplicar(1.02, 10.0);
 
+        //Area quadrilatero
 
+        AreaQuadrilatero.calcularArea(5, 1.5);
     }
 
     
