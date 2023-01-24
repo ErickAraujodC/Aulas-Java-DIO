@@ -22,9 +22,9 @@ public class Main {
         System.out.println();
         //Calculadora
 
-        Calculadora.dividir(1.02, 10.0);
-        Calculadora.subtrair(1.02, 10.0);
-        Calculadora.somar(1.02, 10.0);
+        Calculadora.dividir(1, 10.0);
+        Calculadora.subtrair(1.2, 10);
+        Calculadora.somar(1, 10);
         Calculadora.multiplicar(1.02, 10.0);
 
 
