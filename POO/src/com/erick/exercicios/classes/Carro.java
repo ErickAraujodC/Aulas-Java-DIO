@@ -1,10 +1,14 @@
-package com.erick.classes.exercicios;
+package com.erick.exercicios.classes;
 
 public class Carro {
     String cor;
     String modelo;
     String montadora;
     int capacidadeTanque;
+
+    Carro(){
+
+    }
 
     Carro(String cor, String modelo, String montadora, int capacidadeTanque){
         this.cor = cor;
@@ -31,11 +35,11 @@ public class Carro {
         return modelo;
     }
     
-    void setMontador(String montadora){
+    void setMontadora(String montadora){
         this.montadora = montadora;
     }
     
-    String setMontador(){
+    String setMontadora(){
         return montadora;
     }
 
@@ -50,7 +54,8 @@ public class Carro {
     //
 
     double totalValorTanque(double valorCombustivel){
-        return capacidadeTanque * valorCombustivel;
+        double resultado = capacidadeTanque * valorCombustivel;
+        return Math.floor(resultado);
     }
     
     
