@@ -1,5 +1,5 @@
 package com.erick.exercicios.heranca;
 
-class Carro extends Veiculo {
+class Carro extends Veiculo{
     
 }
