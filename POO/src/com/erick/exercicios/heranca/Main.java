@@ -6,8 +6,8 @@ public class Main {
 
         //upcasts
         Veiculo carro = new Carro();
-        Veiculo moto = new Veiculo();
-        Veiculo Caminhao = new Veiculo();
+        Veiculo moto = new Moto();
+        Veiculo Caminhao = new Caminhao();
 
 
     }
