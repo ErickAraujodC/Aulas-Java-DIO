@@ -1,4 +1,4 @@
-package com.erick.exercicios;
+package com.erick.lista;
 
 import java.util.ArrayList;
 import java.util.Collections;
