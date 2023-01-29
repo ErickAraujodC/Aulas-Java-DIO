@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Ex1_listas {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         List<Double> temperaturas = new ArrayList<Double>();
 
         int cont = 1;
