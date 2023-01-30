@@ -7,37 +7,37 @@ import java.util.Scanner;
 
 public class Ex1_listas {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        List<Double> temperaturas = new ArrayList<Double>();
+        try (Scanner scan = new Scanner(System.in)) {
+            List<Double> temperaturas = new ArrayList<Double>();
 
-        int cont = 1;
+            int cont = 1;
+            while(cont<=6){
+                System.out.printf("Digite a temperatura °C do %d° mês / exemplo: 10,2 =>  ", cont);
+                double temp = scan.nextDouble();
 
-        while(cont<=6){
-            System.out.printf("Digite a temperatura °C do %d° mês / exemplo: 10,2 =>  ", cont);
-            double temp = scan.nextDouble();
+                temperaturas.add(temp);
+                cont++;
+            }
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("Temperatura de média de cada mês no primeiro semestre do ano => ");
 
-            temperaturas.add(temp);
-            cont++;
+            retornaMes(temperaturas);
+
+            Iterator<Double> iterator = temperaturas.iterator();
+            double soma = 0d;
+
+            while(iterator.hasNext()){
+                double next = iterator.next();
+                soma += next;
+            }
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+            double tempMedia = soma/temperaturas.size();
+            System.out.printf("A média da temperatura do 1° semestre foi: %.1f ", tempMedia);
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+            retornaMesMenorMedia(temperaturas, tempMedia);
         }
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("Temperatura de média de cada mês no primeiro semestre do ano => ");
-
-        retornaMes(temperaturas);
-
-        Iterator<Double> iterator = temperaturas.iterator();
-        double soma = 0d;
-
-        while(iterator.hasNext()){
-            double next = iterator.next();
-            soma += next;
-        }
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        double tempMedia = soma/temperaturas.size();
-        System.out.printf("A média da temperatura do 1° semestre foi: %.1f ", tempMedia);
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        retornaMesMenorMedia(temperaturas, tempMedia);
     }
 
     public static void retornaMes(List<Double> lista) {
