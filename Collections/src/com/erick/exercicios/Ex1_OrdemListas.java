@@ -17,30 +17,36 @@ public class Ex1_OrdemListas {
         //Ordenando na ordem de inserção
         System.out.println("<Ordem de inserçao>");
         System.out.println(minhasVaras);
+        System.out.println();
+        
 
         //Ordem aleatória
         System.out.println("<Ordem aleatória>");
         Collections.shuffle(minhasVaras);
         System.out.println(minhasVaras);
+        System.out.println();
 
         //Ordem natural
         System.out.println("<Ordem natural>");
         Collections.sort(minhasVaras);
         System.out.println(minhasVaras);
+        System.out.println();
 
         //Ordem de idade
         System.out.println("<Ordem idade>");
-        Collections.sort(minhasVaras, new ComparatorTamanho());
+        minhasVaras.sort(new ComparatorTamanho());
         System.out.println(minhasVaras);
+        System.out.println();
 
         //Ordem Marca
         System.out.println("<Ordem marca>");
-        Collections.sort(minhasVaras, new ComparatorMarca());
+        minhasVaras.sort(new ComparatorMarca());
         System.out.println(minhasVaras);
+        System.out.println();
 
         //Ordem nome/tamanho/marca
         System.out.println("<Ordem nome/tamanho/marca>");
-        Collections.sort(minhasVaras, new ComparatorNomeTamanhoMarca());
+        minhasVaras.sort(new ComparatorNomeTamanhoMarca());
         System.out.println(minhasVaras);
 }
 }
