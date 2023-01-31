@@ -1,4 +1,4 @@
-package com.erick.exercicios;
+package com.erick.exercicios.ex_listas;
 
 import java.util.ArrayList;
 import java.util.Iterator;
