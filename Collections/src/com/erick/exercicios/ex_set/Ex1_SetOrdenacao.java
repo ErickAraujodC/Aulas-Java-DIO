@@ -51,7 +51,7 @@ public class Ex1_SetOrdenacao {
         Set<Filme> filmes4 = new TreeSet<>(new ComparatorLancamento());
         filmes4.addAll(filmes);
         for(Filme filme : filmes4){
-            System.out.println(filme.getNome() + " - " + filme.getDiretor() + " - " + filme.getLancamento());
+            System.out.println(filme.getLancamento() + " - " + filme.getNome() + " - " + filme.getDiretor());
         }
         System.out.println();
 
@@ -59,7 +59,7 @@ public class Ex1_SetOrdenacao {
         Set<Filme> filmes5 = new TreeSet<>(new ComparatorDiretorNomeLancamento());
         filmes5.addAll(filmes);
         for(Filme filme : filmes5){
-            System.out.println(filme.getNome() + " - " + filme.getDiretor() + " - " + filme.getLancamento());
+            System.out.println(filme.getDiretor() + " - " + filme.getNome() + " - " + filme.getLancamento());
         }
         System.out.println();
 
@@ -142,8 +142,10 @@ class ComparatorLancamento implements Comparator<Filme>{
 
     @Override
     public int compare(Filme o1, Filme o2) {
-    
-        return Integer.compare(o1.getLancamento(), o2.getLancamento());
+        Integer lanc = Integer.compare(o1.getLancamento(), o2.getLancamento());
+        if(lanc != 0) return lanc;
+
+        return o1.getNome().compareToIgnoreCase(o2.getNome());
     }
 
 }
