@@ -19,10 +19,13 @@ public class Ex3_Map {
         }
 
         Map<Integer, Integer> lancamentos = new HashMap<>();
-        int cont = 1;
+        
         for (Integer lancamento : valores) {
-            
-              
+            if(lancamentos.containsKey(lancamento)){
+                lancamentos.put(lancamento, (lancamentos.get(lancamento) + 1));
+            } else {
+                lancamentos.put(lancamento, 1);
+            }
             
         }
         
