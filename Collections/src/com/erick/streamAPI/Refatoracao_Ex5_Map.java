@@ -51,7 +51,7 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        TreeSet<Map.Entry<Integer, Contato>> contatos4 = new TreeSet<Map.Entry<Integer, Contato>>(Comparator.comparing(
+        Set<Map.Entry<Integer, Contato>> contatos4 = new TreeSet<Map.Entry<Integer, Contato>>(Comparator.comparing(
             cont -> cont.getValue().getNumero()
         ));
         contatos4.addAll(contatos.entrySet());

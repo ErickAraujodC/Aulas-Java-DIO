@@ -91,7 +91,6 @@ class ComparatorTamanho implements Comparator<Vara>{
 
     @Override
     public int compare(Vara o1, Vara o2) {
-        // TODO Auto-generated method stub
         return Double.compare(o1.getTamanho(), o2.getTamanho());
     }
 
