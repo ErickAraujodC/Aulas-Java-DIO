@@ -14,7 +14,7 @@ import java.util.TreeSet;
 
 public class Refatoracao_Ex5_Map {
     public static void main(String[] args) {
-        Map<Integer, Contato> contatos = new HashMap<Integer, Contato>(){{
+        Map<Integer, Contato> contatos = new HashMap<>(){{
             put(3, new Contato("Kimberly", 3333));
             put(1, new Contato("Erick", 5555));
             put(4, new Contato("Cristiano", 7777));
@@ -28,7 +28,7 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Map<Integer, Contato> contatos2 = new LinkedHashMap<Integer, Contato>(){{
+        Map<Integer, Contato> contatos2 = new LinkedHashMap<>(){{
             put(3, new Contato("Kimberly", 3333));
             put(1, new Contato("Erick", 5555));
             put(4, new Contato("Cristiano", 7777));
@@ -42,8 +42,7 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Map<Integer, Contato> contatos3 = new TreeMap<>();
-        contatos3.putAll(contatos);
+        Map<Integer, Contato> contatos3 = new TreeMap<>(contatos);
         System.out.println("Contatos: Ordem de ID ");
         for (Map.Entry<Integer, Contato> contato : contatos3.entrySet()) {
             System.out.println("ID: "+ contato.getKey() + " - Nome: " + contato.getValue().getNome() + " - Numero: " + contato.getValue().getNumero());
@@ -51,8 +50,8 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Set<Map.Entry<Integer, Contato>> contatos4 = new TreeSet<Map.Entry<Integer, Contato>>(Comparator.comparing(
-            cont -> cont.getValue().getNumero()
+        Set<Map.Entry<Integer, Contato>> contatos4 = new TreeSet<>(Comparator.comparing(
+                cont -> cont.getValue().getNumero()
         ));
         contatos4.addAll(contatos.entrySet());
 
@@ -63,16 +62,16 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Set<Map.Entry<Integer, Contato>> contatos5 = new TreeSet<Map.Entry<Integer, Contato>>(new Comparator<Map.Entry<Integer, Contato>>() {
+        Set<Map.Entry<Integer, Contato>> contatos5 = new TreeSet<>(new Comparator<>() {
 
             @Override
             public int compare(Entry<Integer, Contato> o1, Entry<Integer, Contato> o2) {
-                Integer nome = o1.getValue().getNome().compareToIgnoreCase(o2.getValue().getNome());
-                if(nome!=0) return nome;
+                int nome = o1.getValue().getNome().compareToIgnoreCase(o2.getValue().getNome());
+                if (nome != 0) return nome;
 
-                return o1.getKey().compareTo(o2.getKey()) ;
+                return o1.getKey().compareTo(o2.getKey());
             }
-            
+
         });
         contatos5.addAll(contatos.entrySet());
 
@@ -80,7 +79,12 @@ public class Refatoracao_Ex5_Map {
         for (Entry<Integer,Contato> contato : contatos5) {
             System.out.println("Nome: " + contato.getValue().getNome() + " - ID: "+ contato.getKey() + " - Numero: " + contato.getValue().getNumero());
         }
+
         System.out.println();
+
+
+
+
 
 
 
