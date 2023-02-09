@@ -14,7 +14,7 @@ import java.util.TreeSet;
 
 public class Refatoracao_Ex5_Map {
     public static void main(String[] args) {
-        Map<Integer, Contato> contatos = new HashMap<>(){{
+        Map<Integer, Contato> contatos = new HashMap<Integer, Contato>(){{
             put(3, new Contato("Kimberly", 3333));
             put(1, new Contato("Erick", 5555));
             put(4, new Contato("Cristiano", 7777));
@@ -28,7 +28,7 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Map<Integer, Contato> contatos2 = new LinkedHashMap<>(){{
+        Map<Integer, Contato> contatos2 = new LinkedHashMap<Integer, Contato>(){{
             put(3, new Contato("Kimberly", 3333));
             put(1, new Contato("Erick", 5555));
             put(4, new Contato("Cristiano", 7777));
@@ -62,7 +62,7 @@ public class Refatoracao_Ex5_Map {
         System.out.println();
 
 
-        Set<Map.Entry<Integer, Contato>> contatos5 = new TreeSet<>(new Comparator<>() {
+        Set<Map.Entry<Integer, Contato>> contatos5 = new TreeSet<>(new Comparator<Entry<Integer, Contato>>() {
 
             @Override
             public int compare(Entry<Integer, Contato> o1, Entry<Integer, Contato> o2) {
