@@ -18,7 +18,7 @@ public class Exception_Custumizada {
 
 
             } catch (ArithmeticException e){
-                System.out.println("Impossível dividir um número por zero");
+                System.out.println("Impossível dividir um número por zero!");
             } catch (ArrayIndexOutOfBoundsException e){
                 System.out.println("O tamanho dos arrays devem ser compativeís, Verifique o seu código!");
             }
